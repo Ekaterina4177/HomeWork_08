@@ -15,11 +15,12 @@ else if (number == 58)
     TaskFree();
 }
 /* else if(number == 60){
-    ();
-}
-else if(number == 62){
-    ();
+    TaskFive();
 } */
+else if (number == 62)
+{
+    TaskFive();
+}
 else if (number != 54 || number != 56 || number != 58 ||
         number != 60 || number != 62)
 {
@@ -208,54 +209,122 @@ void TaskFree()
             }
             Console.WriteLine();
         }
-         Console.WriteLine("Вторая матрица:");
-         for (int a = 0; a < matr2.GetLength(0); a++)
-         {
-             for (int b = 0; b < matr2.GetLength(1); b++)
-             {
-                 Console.Write($"{matr2[a, b]} ");
-             }
-             Console.WriteLine();
-         }
+        Console.WriteLine("Вторая матрица:");
+        for (int a = 0; a < matr2.GetLength(0); a++)
+        {
+            for (int b = 0; b < matr2.GetLength(1); b++)
+            {
+                Console.Write($"{matr2[a, b]} ");
+            }
+            Console.WriteLine();
+        }
     }
 
-void TheProductOfTwoMatrices(int[,] matr1, int[,] matr2, int[,] resultMatr)
-{
-    
-    for (int i = 0; i < matr1.GetLength(0); i++)
+    void TheProductOfTwoMatrices(int[,] matr1, int[,] matr2, int[,] resultMatr)
     {
-        int sum = 0;
-        for (int j = 0; j < matr2.GetLength(0); j++)
+
+        for (int i = 0; i < matr1.GetLength(0); i++)
         {
-            for (int a = 0; a < matr2.GetLength(1); a++){
-            sum += matr1[i, a] * matr2[a, j];
+            int sum = 0;
+            for (int j = 0; j < matr2.GetLength(0); j++)
+            {
+                for (int a = 0; a < matr2.GetLength(1); a++)
+                {
+                    sum += matr1[i, a] * matr2[a, j];
+                }
+                resultMatr[i, j] = sum;
             }
-            resultMatr[i, j] = sum;
         }
     }
-}
-void PrintTheProductOfTwoMatrices(int[,] resultMatr)
-{
-    for (int i = 0; i < resultMatr.GetLength(0); i++)
+    void PrintTheProductOfTwoMatrices(int[,] resultMatr)
     {
-        for (int j = 0; j < resultMatr.GetLength(1); j++)
+        for (int i = 0; i < resultMatr.GetLength(0); i++)
         {
-            Console.Write($"{resultMatr[i, j]} ");
+            for (int j = 0; j < resultMatr.GetLength(1); j++)
+            {
+                Console.Write($"{resultMatr[i, j]} ");
+            }
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
+    int[,] matrix1 = new int[2, 2];
+    int[,] matrix2 = new int[2, 2];
+    int[,] resultMatr = new int[2, 2];
+    Console.WriteLine("Задача 58: Найти произведение двух матриц.");
+    Console.WriteLine();
+    GetMatrix(matrix1, matrix2);
+    PrintMatrix(matrix1, matrix2);
+    Console.WriteLine();
+    Console.WriteLine("Результирующая матрица:");
+    TheProductOfTwoMatrices(matrix1, matrix2, resultMatr);
+    PrintTheProductOfTwoMatrices(resultMatr);
 }
-int[,] matrix1 = new int[2, 2];
-int[,] matrix2 = new int[2, 2];
-int[,] resultMatr = new int[2, 2];
-Console.WriteLine("Задача 58: Найти произведение двух матриц.");
-Console.WriteLine();
-GetMatrix(matrix1, matrix2);
-PrintMatrix(matrix1, matrix2);
-Console.WriteLine();
-Console.WriteLine("Результирующая матрица:");
-TheProductOfTwoMatrices(matrix1, matrix2, resultMatr);
-PrintTheProductOfTwoMatrices(resultMatr);
+
+/* Задача 60. Сформируйте трёхмерный массив из неповторяющихся 
+двузначных чисел. Напишите программу, которая будет построчно выводить массив, 
+добавляя индексы каждого элемента.
+Массив размером 2 x 2 x 2
+66(0,0,0) 25(0,1,0)
+34(1,0,0) 41(1,1,0)
+27(0,0,1) 90(0,1,1)
+26(1,0,1) 55(1,1,1) */
+
+/* Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07 */
+
+void TaskFive()
+{
+    Console.WriteLine("Введите число, соответствующее строкам и столбцам в массиве: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[,] spiralArray = new int[n, n];
+
+    int num = 1;
+    int i = 0;
+    int j = 0;
+
+    while (num <= spiralArray.GetLength(0) * spiralArray.GetLength(1))
+    {
+        spiralArray[i, j] = num;
+        num++;
+
+        if (i <= j + 1 && i + j < spiralArray.GetLength(1) - 1)
+        {
+            j++;
+        }
+        else if (i < j && i + j >= spiralArray.GetLength(0) - 1)
+        {
+            i++;
+        }
+        else if (i >= j && i + j > spiralArray.GetLength(1) - 1)
+        {
+            j--;
+        }
+        else
+        {
+            i--;
+        }
+    }
+
+    void PrintArray(int[,] array)
+    {
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                if (array[i, j] / 10 <= 0)
+                    Console.Write($" {array[i, j]} ");
+
+                else Console.Write($"{array[i, j]} ");
+            }
+            Console.WriteLine();
+        }
+    }
+    Console.WriteLine("Задача 62: Напишите программу, которая заполнит спирально массив 4 на 4.");
+    PrintArray(spiralArray);
 }
 
 
