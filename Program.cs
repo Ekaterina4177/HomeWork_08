@@ -1,4 +1,30 @@
-﻿/* Задача 54: Задайте двумерный массив. Напишите программу, 
+﻿Console.Clear();
+Console.Write("Введите номер задачи 54, 56, 58, 60 или 62: ");
+int number = int.Parse(Console.ReadLine());
+
+if(number == 54){
+    FirstTask();
+}
+/* else if(number == 56){
+    ();
+}
+else if(number == 58){
+    ();
+}
+else if(number == 60){
+    ();
+}
+else if(number == 62){
+    ();
+} */
+else if(number != 54 || number != 56 || number != 58|| 
+        number != 60 || number != 62){
+    Console.WriteLine("Ошибка. Введите правильный номер задачи.");
+}
+
+
+
+/* Задача 54: Задайте двумерный массив. Напишите программу, 
 которая упорядочит по убыванию элементы каждой строки двумерного массива.
 Например, задан массив:
 1 4 7 2
@@ -9,7 +35,7 @@
 9 5 3 2
 8 4 4 2 */
 
-
+void FirstTask(){
 void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -53,9 +79,15 @@ void SortingFromMaxToMin(int[,] array)
 }
 int[,] arr = new int[3, 4];
 FillArray(arr);
-Console.WriteLine("Полученный массив:");
+Console.WriteLine("Задача 54:Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.");
+Console.WriteLine();
+Console.WriteLine("Полученный рандомно массив:");
 PrintArray(arr);
 Console.WriteLine();
 SortingFromMaxToMin(arr);
-Console.WriteLine("Отсортированный массив:");
+Console.WriteLine("Отсортированный массив по убыванию:");
 PrintArray(arr);
+Console.WriteLine();
+}
+
+
