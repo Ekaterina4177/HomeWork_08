@@ -1,0 +1,15 @@
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.csproj.AssemblyReference.cache
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.AssemblyInfoInputs.cache
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.AssemblyInfo.cs
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.csproj.CoreCompileInputs.cache
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\bin\Debug\net6.0\HomeWork_08.exe
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\bin\Debug\net6.0\HomeWork_08.deps.json
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\bin\Debug\net6.0\HomeWork_08.runtimeconfig.json
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\bin\Debug\net6.0\HomeWork_08.dll
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\bin\Debug\net6.0\HomeWork_08.pdb
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.dll
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\refint\HomeWork_08.dll
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.pdb
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\HomeWork_08.genruntimeconfig.cache
+C:\Users\Екатерина\OneDrive\Рабочий стол\HomeWork_08\obj\Debug\net6.0\ref\HomeWork_08.dll
